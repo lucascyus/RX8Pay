@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamento interno de cada linha -->
+    <dimen name="row_padding">16dp</dimen>
+
+    <!-- Raio do canto para bordas arredondadas -->
+    <dimen name="corner_radius">8dp</dimen>
+
+    <!-- Raio da sombra -->
+    <dimen name="shadow_radius">4dp</dimen>
+
+    <!-- Deslocamento horizontal da sombra -->
+    <dimen name="shadow_dx">2dp</dimen>
+
+    <!-- Deslocamento vertical da sombra -->
+    <dimen name="shadow_dy">2dp</dimen>
+
+    <!-- Margem entre as linhas -->
+    <dimen name="row_margin">8dp</dimen>
+
+    <!-- Elevação da sombra -->
+    <dimen name="shadow_elevation">4dp</dimen>
+
+</resources>

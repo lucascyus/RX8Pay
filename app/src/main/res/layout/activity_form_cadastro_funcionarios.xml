@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FormCadastroFuncionario">
+
+
+        <TextView
+            android:id="@+id/title_Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Cadastro de Funcionários"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/containerComponentsCadastro"
+            style="@style/ContainerComponentsCadastro"
+            android:layout_width="393dp"
+            android:layout_height="1867dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_Cadastro" />
+
+        <EditText
+            android:id="@+id/edit_Nome"
+            style="@style/Edit_Text"
+            android:hint="Nome Completo"
+            app:layout_constraintTop_toTopOf="@id/containerComponentsCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            android:textColorHint="@color/black"
+            android:maxLength="100"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+
+        <EditText
+            android:id="@+id/edit_DataNascimento"
+            style="@style/Edit_Text"
+            android:hint="Nascimento (dd/mm/aaaa)"
+            android:inputType="date"
+            android:maxLength="10"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@+id/edit_Nome"
+            android:textColorHint="@color/black"/>
+
+        <EditText
+            android:id="@+id/edit_Cpf"
+            style="@style/Edit_Text"
+            android:hint="Cpf"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@+id/edit_DataNascimento"
+            android:textColorHint="@color/black"
+            android:maxLength="11"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Rg"
+            style="@style/Edit_Text"
+            android:hint="Rg"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Cpf"
+            android:textColorHint="@color/black"
+            android:maxLength="7"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Sexo"
+            style="@style/Edit_Text"
+            android:hint="Sexo"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Rg"
+            android:textColorHint="@color/black"
+            android:maxLength="25"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Ctps"
+            style="@style/Edit_Text"
+            android:hint="Ctps"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Sexo"
+            android:textColorHint="@color/black"
+            android:maxLength="8"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_TituloEleitor"
+            style="@style/Edit_Text"
+            android:hint="Título de Eleitor"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Ctps"
+            android:textColorHint="@color/black"
+            android:maxLength="12"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Reservista"
+            style="@style/Edit_Text"
+            android:hint="Reservista"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_TituloEleitor"
+            android:textColorHint="@color/black"
+            android:maxLength="12"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Telefone"
+            style="@style/Edit_Text"
+            android:hint="Telefone"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Reservista"
+            android:textColorHint="@color/black"
+            android:maxLength="11"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Email"
+            style="@style/Edit_Text"
+            android:hint="Email"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Telefone"
+            android:textColorHint="@color/black"
+            android:maxLength="25"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Cep"
+            style="@style/Edit_Text"
+            android:hint="Cep"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Email"
+            android:textColorHint="@color/black"
+            android:maxLength="8"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_Endereco"
+            style="@style/Edit_Text"
+            android:hint="Endereço"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Cep"
+            android:textColorHint="@color/black"
+            android:maxLength="100"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/title_DadosBanco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados Bancários"
+            android:fontFamily="sans-serif-light"
+            android:textSize="40sp"
+            android:textColor="@color/indigo"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Endereco" />
+
+
+        <EditText
+            android:id="@+id/edit_NomeBanco"
+            style="@style/Edit_Text"
+            android:hint="Nome Do Banco"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/title_DadosBanco"
+            android:textColorHint="@color/black"
+            android:maxLength="100"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_NumeroConta"
+            style="@style/Edit_Text"
+            android:hint="Número da Conta"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_NomeBanco"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_NumeroBanco"
+            style="@style/Edit_Text"
+            android:hint="Número do Banco"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_NumeroConta"
+            android:textColorHint="@color/black"
+            android:maxLength="3"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_AgenciaBancaria"
+            style="@style/Edit_Text"
+            android:hint="Agência Bancária"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_NumeroBanco"
+            android:textColorHint="@color/black"
+            android:maxLength="5"
+            android:inputType="number|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_TipoConta"
+            style="@style/Edit_Text"
+            android:hint="Tipo de Conta"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_AgenciaBancaria"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Cargo"
+            android:popupBackground="@color/indigo"
+            android:background="@color/indigo"
+            android:entries="@array/opcoes"
+            android:layout_marginTop="100dp"
+            style="@style/Edit_Text"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_TipoConta"
+            android:textColorHint="@color/black"/>
+
+        <EditText
+            android:id="@+id/edit_Salario"
+            style="@style/Edit_Text"
+            android:hint="Salário"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:textColorHint="@color/black"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/edit_DataAdmissao"
+            style="@style/Edit_Text"
+            android:hint="Admissão (dd/mm/aaaa)"
+            android:inputType="date"
+            android:maxLength="10"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_Salario"
+            android:textColorHint="@color/black"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_Cadastrar"
+            style="@style/ButtonCadastro"
+            android:text="Cadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerComponentsCadastro" />
+
+        <TextView
+            android:id="@+id/link_PossuiConta"
+            style="@style/LinkPossuiConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_Cadastrar"
+            android:clickable="true"
+            android:onClick="CadastroPage"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/menu_main"
+            tools:ignore="MissingConstraints"
+            android:background="@color/indigo"
+            app:itemTextAppearanceActive="@style/Bottom"
+            app:itemTextAppearanceInactive="@style/Bottom"
+            />
+
+        <FrameLayout
+            android:id="@+id/popupAnchor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FormCadastro">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-30dp"
+            android:src="@drawable/logo_simplificada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title_redefinir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_redefinir"
+            android:fontFamily="sans-serif-light"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="125dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/containerComponentsSenha"
+            style="@style/ContainerComponentsSenha"
+            app:layout_constraintTop_toBottomOf="@+id/title_redefinir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/edit_login"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_person"
+            android:hint="Login"
+            app:layout_constraintTop_toTopOf="@id/containerComponentsSenha"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsSenha"
+            android:maxLength="20"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"
+            android:textColorHint="@color/black"/>
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_mail"
+            android:hint="Email"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsSenha"
+            app:layout_constraintTop_toBottomOf="@+id/edit_login"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColorHint="@color/black"/>
+
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_eye"
+            android:hint="Nova Senha"
+            android:layout_marginTop="50dp"
+            android:inputType="textPassword|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsSenha"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponentsSenha"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColorHint="@color/black"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_redefinir_senha"
+            style="@style/ButtonRedefinir"
+            android:text="Redefinir Senha"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerComponentsSenha" />
+
+        <TextView
+            android:id="@+id/link_login"
+            style="@style/LinkLogin"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_senha_redefinida"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_redefinir_senha"
+            android:clickable="true"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

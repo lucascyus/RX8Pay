@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Forma do fundo -->
+        <item>
+            <shape xmlns:android="http://schemas.android.com/apk/res/android">
+                <corners android:radius="8dp" /> <!-- Raio das bordas -->
+                <!-- Cor de fundo é definida programaticamente -->
+            </shape>
+        </item>
+
+        <!-- Cor de fundo condicional (verde ou vermelho) -->
+        <item android:id="@+id/backgroundStatus">
+            <shape xmlns:android="http://schemas.android.com/apk/res/android">
+                <solid android:color="#FF0000" /> <!-- Cor de fundo padrão (vermelho) -->
+            </shape>
+        </item>
+    </layer-list>
+
+</shape>

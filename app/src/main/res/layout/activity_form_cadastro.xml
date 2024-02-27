@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FormCadastro">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-30dp"
+            android:src="@drawable/logo_simplificada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title_CrieConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_cadastro"
+            android:fontFamily="sans-serif-light"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="125dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/containerComponentsCadastro"
+            style="@style/ContainerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@+id/title_CrieConta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/edit_login"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_person"
+            android:hint="Login"
+            app:layout_constraintTop_toTopOf="@id/containerComponentsCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_mail"
+            android:hint="Email"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@+id/edit_login"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_eye"
+            android:hint="Senha"
+            android:inputType="textPassword|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edit_confirma_senha"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_eye"
+            android:hint="Confirme a senha"
+            android:inputType="textPassword|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edit_senha"
+            android:textColorHint="@color/black"
+            android:maxLength="20"
+            android:singleLine="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_criar_conta"
+            style="@style/ButtonCadastro"
+            android:text="Criar Conta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerComponentsCadastro" />
+
+        <TextView
+            android:id="@+id/link_PossuiConta"
+            style="@style/LinkPossuiConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_possui_conta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_criar_conta"
+            android:clickable="true"
+            android:onClick="LoginPage"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

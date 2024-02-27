@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">RX8</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_esqueci">Esqueceu a senha?</string>
+
+
+    <string name="title_cadastro">Crie sua conta</string>
+    <string name="text_possui_conta">Já tenho conta</string>
+
+    <string name="title_redefinir">Redefina sua senha</string>
+    <string name="text_senha_redefinida">Já sei minha senha</string>
+
+    <string-array name="opcoes">
+        <item> </item>
+        <item>Assistente Administrativo</item>
+        <item>Assistente de Vendas</item>
+        <item>Suporte ao Cliente</item>
+        <item>Auxiliar de Estoque</item>
+        <item>Recepcionista</item>
+        <item>Assistente de Marketing</item>
+        <item>Auxiliar de Contabilidade</item>
+        <item>Operador de Caixa</item>
+        <item>Assistente de Recursos Humanos</item>
+        <item>Auxiliar de Limpeza</item>
+    </string-array>
+</resources>
